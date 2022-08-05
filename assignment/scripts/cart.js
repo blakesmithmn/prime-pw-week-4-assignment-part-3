@@ -13,8 +13,8 @@ let basket = [];
 //   - return `true` indicating the item was added
 console.log('--- ADDING VALUES TO AN ARRAY ---');
 
-function addItem(item, basket) {
-    basket.push(item);
+function addItem(value, arr) {
+    basket.push(value);
     return true;
 }
 
@@ -31,9 +31,9 @@ console.log('--- LIST ITEMS ---');
 // - Create a function called `listItems`. It should:
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
-function listItems(basket) {
-    for (let i = 0; i < basket.length; i++) {
-        console.log(basket[i]);
+function listItems(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
 
     }
     return '--- end item list --- ';
@@ -48,12 +48,12 @@ console.log(listItems(basket));
 // function called empty - set to interact with an array
 // it needs to loop through the array removing each item one at a time
 // we could try using pop?
-function empty(basket) {
-    for (let i = basket.length - 1; i >= 0; i--) {
+function empty(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
         // needs a condition to tell it to check for a value?
-        if (basket.indexOf[i] !== -1) {
+        if (arr.indexOf[i] !== -1) {
             // code to remove the item from the array
-            basket.pop();
+            arr.pop();
             console.log('removed all items from basket');
 
         }
