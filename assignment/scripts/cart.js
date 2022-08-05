@@ -18,13 +18,13 @@ function addItem(value, arr) {
     return true;
 }
 
-console.log(addItem('Apple', basket));
+console.log('Adding Apples to the basket:', addItem('Apple', basket));
 console.log(basket);
-console.log(addItem('Pear', basket));
+console.log('Adding Pears to the basket:', addItem('Pear', basket));
 console.log(basket);
-console.log(addItem('Peach', basket));
+console.log('Adding Peaches to the basket:', addItem('Peach', basket));
 console.log(basket);
-console.log(addItem('Mango', basket));
+console.log('Adding Mangoes to the basket:', addItem('Mango', basket));
 console.log(basket);
 
 console.log('--- LIST ITEMS ---');
@@ -34,7 +34,6 @@ console.log('--- LIST ITEMS ---');
 function listItems(arr) {
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i]);
-
     }
     return '--- end item list --- ';
 }
@@ -47,7 +46,7 @@ console.log(listItems(basket));
 
 // function called empty - set to interact with an array
 // it needs to loop through the array removing each item one at a time
-// we could try using pop?
+// we could try using pop? and index of? 
 function empty(arr) {
     for (let i = arr.length - 1; i >= 0; i--) {
         // needs a condition to tell it to check for a value?
@@ -59,7 +58,7 @@ function empty(arr) {
         }
 
     }
-
+    return 'basket is now empty';
 }
 
 
