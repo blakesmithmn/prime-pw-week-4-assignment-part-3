@@ -11,6 +11,8 @@ let basket = [];
 //   - take an input parameter for a string `item`
 //   - add the new item to the global array `basket`. 
 //   - return `true` indicating the item was added
+console.log('--- ADDING VALUES TO AN ARRAY ---');
+
 function addItem(item, basket) {
     basket.push(item);
     return true;
@@ -22,7 +24,10 @@ console.log(addItem('Pear', basket));
 console.log(basket);
 console.log(addItem('Peach', basket));
 console.log(basket);
+console.log(addItem('Mango', basket));
+console.log(basket);
 
+console.log('--- LIST ITEMS ---');
 // - Create a function called `listItems`. It should:
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
@@ -39,18 +44,27 @@ console.log(listItems(basket));
 // - Create a function called `empty`. It should:
 //   - reset the `basket` to an empty array
 
+
+// function called empty - set to interact with an array
+// it needs to loop through the array removing each item one at a time
+// we could try using pop?
 function empty(basket) {
-    for (let i = 0; i < basket.length; i++) {
+    for (let i = basket.length - 1; i >= 0; i--) {
+        // needs a condition to tell it to check for a value?
+        if (basket.indexOf[i] !== -1) {
+            // code to remove the item from the array
+            basket.pop();
+            console.log('removed all items from basket');
 
-        if (basket[i] === 5) {
-
-            arr.splice(i, 1);
         }
 
     }
 
 }
 
+
+console.log(empty(basket));
+console.log(basket);
 // > __IMPORTANT__
 // > Make sure that you are writing code *in the file* to test every function that you write!
 
