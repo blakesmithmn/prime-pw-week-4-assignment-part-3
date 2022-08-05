@@ -32,6 +32,7 @@ console.log('--- LIST ITEMS ---');
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
 function listItems(arr) {
+    console.log('Here are the items in our basket:');
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i]);
     }
@@ -64,19 +65,9 @@ function empty(arr) {
 
 console.log(empty(basket));
 console.log(basket);
-// > __IMPORTANT__
-// > Make sure that you are writing code *in the file* to test every function that you write!
-
-// For example, to test `addItem`:
-// ```
-// console.log(`Basket is ${basket}`);
-// console.log('Adding apples (expect true)', addItem('apples'));
-// console.log(`Basket is now ${basket}`);
-// ```
 
 // ### Stretch Goals 
 // Remember that Stretch Goals are not required, but will help you to further develop concepts from the skills we have covered.
-
 // __Using functions in other functions!__
 
 // 1. Add a global `const` named `maxItems` and set it to 5.
@@ -84,12 +75,16 @@ const maxItems = 5;
 // 2. Create a function called isFull(). It should:
 //   - return `false` if the basket contains *less* than max number of items
 //   - return `true` otherwise (equal or more than maxItems)
-function isFull(items, basket) {
-    if (items > maxItems) {
+function isFull(array) {
+    if (array.length < maxItems) {
         return false;
     }
     return true;
 }
+
+let testArray = [1, 2, 3, 4, 5, 6, 7];
+console.log(isFull(basket));
+console.log(isFull(testArray));
 // 3. Update the required `addItem` function to:
 //   - Use the `isFull` function to prevent more than `maxItems` from being added to the basket. 
 //   - If an item was added to the array, return `true`
